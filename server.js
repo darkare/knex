@@ -1,7 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var port = process.env.PORT || 8001;
-var knex = require('./knexfile');
+var knex = require('./src/knexfile');
 var cors = require('cors');
 var logger = require('morgan');
 
@@ -42,7 +42,6 @@ app.post('/users', (req, res)=> {
     res.json(id);
     res.end();
   });
-  
 })
 
 // app.get('/todos', function(req, res) {
